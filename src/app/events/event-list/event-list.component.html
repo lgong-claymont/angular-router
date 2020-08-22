@@ -1,0 +1,11 @@
+<h2>List of Events</h2>
+<ul class="events">
+  <li *ngFor="let event of events$ | async"
+    [class.selected]="event.id === selectedId">
+    <a [routerLink]="['/event', event.id]">
+      <span class="badge">{{event.id}}</span> {{event.name}}
+    </a>
+  </li>
+</ul>
+
+<button routerLink="/sidekicks">Go to sidekicks</button>

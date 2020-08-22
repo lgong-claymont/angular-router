@@ -1,0 +1,13 @@
+<h2>Cities in DE</h2>
+<div *ngIf="city$ | async as city">
+  <h3>"{{ city.name }}"</h3>
+  <div>
+    <label>Id: </label>{{ city.id }}</div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="city.name" placeholder="name"/>
+  </div>
+  <p>
+    <button (click)="gotoCities(city)">Back</button>
+  </p>
+</div>

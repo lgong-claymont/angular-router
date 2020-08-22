@@ -1,0 +1,11 @@
+<h2>Cities in DE</h2>
+<ul class="cities">
+  <li *ngFor="let city of cities$ | async"
+    [class.selected]="city.id === selectedId">
+    <a [routerLink]="['/city', city.id]">
+      <span class="badge">{{city.id}}</span> {{city.name}}
+    </a>
+  </li>
+</ul>
+
+<button routerLink="/sidekicks">Go to sidekicks</button>
